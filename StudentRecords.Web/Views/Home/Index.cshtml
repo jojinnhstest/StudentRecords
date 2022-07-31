@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Home page</p>
+
+    <div style="width: 100%; float: left; background-color: greenyellow;">
+        <div style="width: 25%; float: left;padding: 1%;background:#4cff00;">
+            ID
+        </div>
+
+        <div style="width: 25%; float: left;padding: 1%;background:#4cff00;">
+            Name
+        </div>
+
+        <div style="width: 25%; float: left;padding: 1%;background:#4cff00;">
+            Phone
+        </div>
+
+
+        @{ foreach (var student in Model)
+            {
+                <br/>
+    <div style="width: 25%; float: left; padding: 1%">
+        @student.ID
+    </div>
+                    <div style="width: 25%; float: left; padding: 1%">
+                        @student.Name
+                    </div>
+                                    <div style="width: 25%; float: left; padding: 1%">
+                                        @student.Phone
+                                    </div> } }
+
+    </div>
+</div>
